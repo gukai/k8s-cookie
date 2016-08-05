@@ -87,7 +87,7 @@ class Pod(object):
             if created_info['reference']['name'] == rcname:
                 ip_list.append(item['status']['podIP'])
 
-        return  ip_list
+        return  sorted(ip_list,key=unicode.lower)
 
 
 
